@@ -1,0 +1,234 @@
+---
+title: 'Type Level Typescript'
+date: 2022-11-20
+tags:
+  - TypeScript
+  - 型レベルプログラミング
+links:
+ - /posts/2022/11/19/learning-typescript
+draft: false
+---
+
+[<Type>Level TypeScript](https://type-level-typescript.com/)
+
+### 1. Types & values
+
+型レベルのプログラミングではジェネリクス型とその型パラメータに注目する.
+```
+// This is a type-level function:
+type DoSomething<A, B> = ...
+
+// This is a value-level function:
+const doSomething = (a, b) => ...
+```
+
+型レベルプログラミングでできること
+- コードの分岐
+- 変数代入
+- 関数
+- ループ
+- 等値チェック
+
+型レベルプログラミングでできないこと
+- 可変状態(値の再割り当て)
+- 入出力
+- 高階関数
+
+型のテスト
+```
+type test = Except<Equal<typeof res, number>>;
+```
+
+### 2. Types are just data
+
+プログラミング言語がデータの変換であるのと同様に、型レベルのプログラミングでは型を入力として、型を出力する.
+
+プリミティブ型
+```
+type Primitives =
+ | number
+ | string
+ | boolean
+ | symbol
+ | bigint
+ | undefined
+ | null;
+```
+
+型レベルのデータ構造
+```
+type DataStructures =
+ | { key1: boolean; key2: number } // objects
+ | { [key: string]: number } // records
+ | [boolean, number] // tuples
+ | number[]; // arrays
+```
+
+### 3. Objects & Records
+
+```
+type SomeObject = { key1: boolean; key2: number };
+type SomeRecord = { [key: string]: number };
+```
+
+> Objects and Records are two of the most common data structures we can manipulate in Type-level TypeScript. They will be the bread and butter of our type-level algorighms, ...
+
+typeのpropertyを読む
+```
+type User = { name: string; age: number; role: "admin" | "standard" };
+
+type Age = User["age"]; // => number
+type Role = User["role"]; // => "admin" | "standard"
+
+type Age = User.age; // => syntax error
+```
+
+複数のpropertyを同時に読む
+```
+type User = { name: string; age: number; role: "admin" | "standard" };
+
+type NameOrAge = User["name" | "age"]; // => string | number
+```
+
+keyofでkeyの型を得る
+```
+type User = {
+ name: string;
+ age: number;
+ role: "admin" | "standard";
+};
+
+type Keys = keyof User; // "name" | "age" | "role"
+type UserValues = User[keyof User]; //  string | number | "admin" | "standard"
+```
+
+method風の型
+```
+type ValueOf<Obj> = Obj[keyof Obj];
+type UserValues = ValueOf<User>;
+```
+
+分配法則っぽいもの
+```
+keyof (A & B) = (keyof A) | (keyof B)
+keyof (A | B) = (keyof A) & (keyof B)
+```
+
+Records
+```
+type Record<K, V> = { [key in K]: V };
+```
+
+Helper関数(ulitity types)
+Partial
+```
+type Props = { value: string; focused: boolean; edited: boolean };
+
+type PartialProps = Partial<Props>;
+// is equivalent to:
+type PartialProps = { value?: string; focused?: boolean; edited?: boolean };
+```
+
+Required
+```
+type Props = { value?: string; focused?: boolean; edited?: boolean };
+
+type RequiredProps = Required<Props>;
+// is equivalent to:
+type RequiredProps = { value: string; focused: boolean; edited: boolean };
+```
+
+Pick
+```
+type Props = { value: string; focused: boolean; edited: boolean };
+
+type ValueProps = Pick<Props, "value">;
+// is equivalent to:
+type ValueProps = { value: string };
+
+type SomeProps = Pick<Props, "value" | "focused">;
+// is equivalent to:
+type SomeProps = { value: string; focused: boolean };
+```
+
+Omit
+```
+type Props = { value: string; focused: boolean; edited: boolean };
+
+type ValueProps = Omit<Props, "value">;
+// is equivalent to:
+type ValueProps = { edited: boolean; focused: boolean };
+
+type OtherProps = Omit<Props, "value" | "focused">;
+// is equivalent to:
+type OtherProps = { edited: boolean };
+```
+
+### 4. Arrays & Tuples
+
+タプルのcat
+```
+type Tuple1 = [3, 4]
+type Tuple2 = [1, 2, 3, ...Tuple1]
+```
+
+### 5. Code branching with Conditional Types
+
+Conditional Types
+```
+type TrueOrFalse = A extends B ? true : false;
+/*                 -----------   ----   -----
+                        ^          /         \
+                    condition    branch     branch
+                                if true    if false
+                  \-------------------------/
+                               ^
+                        Conditional Type
+*/
+```
+
+```
+type If<A extends boolean, B, C> = A extends true ? B : C;
+```
+
+Pattern Matching with Conditional Types
+```
+type IsUser<T> =
+ T extends { name: string, age: number } ? true : false
+```
+
+[infer](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
+引数から型を推論して返す
+```
+type Flatten<Type> = Type extends Array<infer Item> ? Item : Type;
+
+type Head<tuple> = tuple extends [infer first, ...any] ? first : never;
+
+// `Head` is the type-level equivalent of:
+const head = ([first]) => first;
+
+type t1 = Head<["alpha", "beta", "gamma"]>; // => "alpha"
+type t2 = Head<[]>; // => never
+```
+
+関数型の引数に使うと名前付きタプルになるみたい
+```
+type Parameters<F> = F extends (...params: infer P) => any ? P : never;
+
+type Fn = (name: string, id: number) => string;
+
+type t1 = Parameters<Fn>; // => [name: string, id: number]
+```
+
+### 6. Loops with Recursive Types
+
+### 7. Template Literal Types
+
+### 8. Advanced Union Types
+
+### 9. Loops with Mapped Types
+
+### 10. Assignabillity In Depth
+
+### 11. Debugging Types
+
