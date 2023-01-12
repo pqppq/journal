@@ -18,7 +18,7 @@ Tools
 - [ ] [turbot/streampipe](https://github.com/turbot/steampipe) universal interface to APIs(SQL query to cloud, Saas, code, logs, and more)
 - [ ] [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine)
 - [ ] [grpc/grpc](https://github.com/grpc/grpc)
-- [ ] []()
+- [ ] [tldraw/tldraw](https://github.com/tldraw/tldraw)
 - [ ] []()
 - [ ] []()
 - [ ] []()
@@ -36,3 +36,4 @@ App
 
 Other
 - [] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
+- [] [priyankavergadia/GCPSketchnote](https://github.com/priyankavergadia/GCPSketchnote)
