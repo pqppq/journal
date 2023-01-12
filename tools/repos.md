@@ -17,8 +17,22 @@ Tools
 - [ ] [pulmi/pulumi](https://github.com/pulumi/pulumi) IaC SDK
 - [ ] [turbot/streampipe](https://github.com/turbot/steampipe) universal interface to APIs(SQL query to cloud, Saas, code, logs, and more)
 - [ ] [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine)
+- [ ] [grpc/grpc](https://github.com/grpc/grpc)
 - [ ] []()
 - [ ] []()
 - [ ] []()
 - [ ] []()
+
+Library
+- [x] [pmndrs/zustand](https://github.com/pmndrs/zustand)
+- [ ] [sindresorhus/ky](https://github.com/sindresorhus/ky)
+- [x] [colinhacks/zod](https://github.com/colinhacks/zod)
+- [ ] [trpc/trpc](https://github.com/trpc/trpc)
 - [ ] []()
+- [ ] []()
+
+App
+- [ ] [](https://www.moomoo.com/jp)
+
+Other
+- [] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
