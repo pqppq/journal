@@ -10,7 +10,9 @@ Vim
 - [ ] [sindrets/diffview.nvim](https://github.com/sindrets/diffview.nvim)
 - [x] [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)
 - [ ] [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)
-- [ ] [petertriho/nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
+- [x] [petertriho/nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
+- [ ] [kevinhwang91/nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
+- [ ] [tailwindcss-colorizer-cmp.nvim](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim)
 
 Tools
 - [ ] [nektos/act](https://github.com/nektos/act) run github actions locally
@@ -32,7 +34,8 @@ Library
 - [ ] []()
 
 App
-- [ ] [](https://www.moomoo.com/jp)
+- [ ] [moomoo](https://www.moomoo.com/jp)
+- [ ] [logseq](https://logseq.com/)
 
 Other
 - [] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
