@@ -13,6 +13,9 @@ Vim
 - [x] [petertriho/nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
 - [ ] [kevinhwang91/nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
 - [ ] [tailwindcss-colorizer-cmp.nvim](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim)
+- [ ] [catppuccin/nvim](https://github.com/catppuccin/nvim)
+- [ ] [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
+
 
 Tools
 - [ ] [nektos/act](https://github.com/nektos/act) run github actions locally
@@ -21,7 +24,7 @@ Tools
 - [ ] [sharkdp/hyperfine](https://github.com/sharkdp/hyperfine)
 - [ ] [grpc/grpc](https://github.com/grpc/grpc)
 - [ ] [tldraw/tldraw](https://github.com/tldraw/tldraw)
-- [ ] []()
+- [ ] [Canop/bacon](https://github.com/Canop/bacon)
 - [ ] []()
 - [ ] []()
 
@@ -30,8 +33,9 @@ Library
 - [ ] [sindresorhus/ky](https://github.com/sindresorhus/ky)
 - [x] [colinhacks/zod](https://github.com/colinhacks/zod)
 - [ ] [trpc/trpc](https://github.com/trpc/trpc)
-- [ ] []()
-- [ ] []()
+- [ ] [gofiber/fiber](https://github.com/gofiber/fiber)
+- [ ] [stretchr/testify](https://github.com/stretchr/testify)
+- [ ] [akrylysov/pogreb](https://github.com/akrylysov/pogreb)
 
 App
 - [ ] [moomoo](https://www.moomoo.com/jp)
@@ -40,3 +44,4 @@ App
 Other
 - [] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
 - [] [priyankavergadia/GCPSketchnote](https://github.com/priyankavergadia/GCPSketchnote)
+- [] [Pungyeon/clean-go-article](https://github.com/Pungyeon/clean-go-article)
