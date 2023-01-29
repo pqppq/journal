@@ -45,3 +45,6 @@ Other
 - [] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
 - [] [priyankavergadia/GCPSketchnote](https://github.com/priyankavergadia/GCPSketchnote)
 - [] [Pungyeon/clean-go-article](https://github.com/Pungyeon/clean-go-article)
+
+To read
+- [] [octaltree/linearf](https://github.com/octaltree/linearf)
