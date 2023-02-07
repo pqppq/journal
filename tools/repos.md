@@ -16,6 +16,10 @@ Vim
 - [ ] [catppuccin/nvim](https://github.com/catppuccin/nvim)
 - [ ] [vim-syntastic/syntastic](https://github.com/vim-syntastic/syntastic)
 
+Lang
+- [ ] [TheAlgorithms/Rust](https://github.com/TheAlgorithms/Rust)
+- [ ] [go101](https://github.com/go101/go101)
+
 
 Tools
 - [ ] [nektos/act](https://github.com/nektos/act) run github actions locally
@@ -25,7 +29,7 @@ Tools
 - [ ] [grpc/grpc](https://github.com/grpc/grpc)
 - [ ] [tldraw/tldraw](https://github.com/tldraw/tldraw)
 - [ ] [Canop/bacon](https://github.com/Canop/bacon)
-- [ ] []()
+- [ ] [Repaly - GlaphQL client](https://relay.dev/)
 - [ ] []()
 
 Library
@@ -42,9 +46,13 @@ App
 - [ ] [logseq](https://logseq.com/)
 
 Other
-- [] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
-- [] [priyankavergadia/GCPSketchnote](https://github.com/priyankavergadia/GCPSketchnote)
-- [] [Pungyeon/clean-go-article](https://github.com/Pungyeon/clean-go-article)
+- [ ] [f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
+- [ ] [priyankavergadia/GCPSketchnote](https://github.com/priyankavergadia/GCPSketchnote)
+- [ ] [Pungyeon/clean-go-article](https://github.com/Pungyeon/clean-go-article)
+- [ ] [karanpratapsingh/system-design](https://github.com/karanpratapsingh/system-design/blob/main/README.md)
 
 To read
-- [] [octaltree/linearf](https://github.com/octaltree/linearf)
+- [ ] [octaltree/linearf](https://github.com/octaltree/linearf)
+
+Service
+- [ ] [AlgoExpert](https://www.algoexpert.io/purchase#systemsexpert)
