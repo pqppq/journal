@@ -1,5 +1,11 @@
 [go/wiki](https://github.com/golang/go/wiki)
 
+project layout
+https://github.com/golang-standards/project-layout/tree/master/internal
+
+example tests
+https://go.dev/blog/examples
+
 [Embedding in Go: Part 1 - structs in structs](https://eli.thegreenplace.net/2020/embedding-in-go-part-1-structs-in-structs/)
 
 ある型があるインターフェースを満たしているかチェックする
@@ -69,13 +75,14 @@ emptyCtx
 valueCtx
 
 context tree
+```
 .
 └── Background or TODO
     └── emptyCtx
         ├── valueCtx(withValue)
         ├── cancelCtx(withCancel)
         └── timerCtx(WithDeadline or WithTimeout)
-
+```
 
 ```
 import "context"
@@ -103,3 +110,17 @@ if err := doSomeThing(); err != nil {
     }
 }
 ```
+
+AST
+go/token/token.go
+```
+type Node interface {
+    Pos() token.Pos // position of first character belonging to the node
+    End() token.Pos // position of first character immediately after the node
+}
+...
+func Inspect(node Node, f func(Node) bool) {
+  Walk(inspector(f), node)
+}
+```
+
